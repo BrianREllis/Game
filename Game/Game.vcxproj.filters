@@ -32,5 +32,8 @@
     <ClInclude Include="splash.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="collisionTests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

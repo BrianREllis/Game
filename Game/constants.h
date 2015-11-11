@@ -4,6 +4,15 @@
 const int SCREEN_X = 800;
 const int SCREEN_Y = 600;
 
+class player
+{
+public:
+	float xPos, yPos;
+
+private:
+
+};
+
 //game object class base
 
 /*class GameObject
