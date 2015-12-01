@@ -23,6 +23,19 @@ int main()
 	while (sfw::stepContext())
 	{
 		sfw::drawString(d, "ARCHAIC GAMES", 150, 400, 40, 40);
+		if (pStat.turnCounter == 0)
+		{
+			if (sfw::getKey('W'))
+				pStat.yPos += sfw::getDeltaTime() * 100;
+			if (sfw::getKey('D'))
+				pStat.xPos += sfw::getDeltaTime() * 100;
+			if (sfw::getKey('A'))
+				pStat.xPos -= sfw::getDeltaTime() * 100;
+			if (sfw::getKey('S'))
+				pStat.yPos -= sfw::getDeltaTime() * 100;
+			pStat.turnCounter = 100;
+		}
+		pStat.turnCounter--;
 		sfw::drawTexture(p, pStat.xPos, pStat.yPos, 40, 40);
 	}
 

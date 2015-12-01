@@ -8,12 +8,14 @@ class player
 {
 public:
 	float xPos, yPos;
-
+	int turnCounter = 100;
 private:
 
 };
 
 //game object class base
+
+
 
 /*class GameObject
 {
