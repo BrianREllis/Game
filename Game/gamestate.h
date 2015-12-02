@@ -1,12 +1,12 @@
 #pragma once
 #include <iostream>
+#include "constants.h"
 
 class GameState 
 {
 private:
-	enum gameStates { SPLASH, MENU, PLAY };
+
 public:
-	gameStates currentState = SPLASH;
-	static void setState(gameStates cState);
-	gameStates getState();
+	void play();
+	STATE update();
 };

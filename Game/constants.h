@@ -1,16 +1,32 @@
 #pragma once
 #include <iostream>
 
+enum STATE {INIT, MAIN , PLAY, GAME, EXIT};
+
 const int SCREEN_X = 800;
 const int SCREEN_Y = 600;
 
-class player
+class Character
 {
 public:
 	float xPos, yPos;
-	int turnCounter = 100;
+};
+
+class player : public Character
+{
+public:
+	bool hasInput = false;
 private:
 
+};
+
+class enemy : public Character
+{
+public:
+	void movement()
+	{
+		
+	}
 };
 
 //game object class base
