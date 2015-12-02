@@ -5,6 +5,7 @@ enum STATE {INIT, MAIN , PLAY, GAME, EXIT};
 
 const int SCREEN_X = 800;
 const int SCREEN_Y = 600;
+const int MOVEMENT = 20;
 
 class Character
 {

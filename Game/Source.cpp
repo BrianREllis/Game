@@ -15,8 +15,8 @@ int main()
 	pStat.yPos = 100;
 
 	enemy eStat;
-	eStat.xPos;
-	eStat.yPos;
+	eStat.xPos = 40;
+	eStat.yPos = 40;
 
 	sfw::initContext(SCREEN_X, SCREEN_Y,"SOME SHITTY GAME");
 
@@ -30,22 +30,22 @@ int main()
 		
 		if (sfw::getKey('W'))
 		{
-			pStat.yPos += sfw::getDeltaTime() * 100;
+			pStat.yPos += MOVEMENT;
 			pStat.hasInput = true;
 		}
 		if (sfw::getKey('D'))
 		{
-			pStat.xPos += sfw::getDeltaTime() * 100;
+			pStat.xPos += MOVEMENT;
 			pStat.hasInput = true;
 		}
 		if (sfw::getKey('A'))
 		{
-			pStat.xPos -= sfw::getDeltaTime() * 100;
+			pStat.xPos -= MOVEMENT;
 			pStat.hasInput = true;
 		}
 		if (sfw::getKey('S'))
 		{
-			pStat.yPos -= sfw::getDeltaTime() * 100;
+			pStat.yPos -= MOVEMENT;
 			pStat.hasInput = true;
 		}
 
@@ -53,9 +53,11 @@ int main()
 		{
 			if (pStat.xPos > eStat.xPos && pStat.yPos > eStat.yPos)
 			{
-				eStat.xPos += 100;
-				eStat.yPos += 100;
+				eStat.xPos += MOVEMENT;
+				eStat.yPos += MOVEMENT;
+				pStat.hasInput = false;
 			}
+
 		}
 		
 		sfw::drawTexture(p, pStat.xPos, pStat.yPos, 40, 40);
